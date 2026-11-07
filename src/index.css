@@ -432,6 +432,7 @@ input[type='radio'] {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
+  z-index: 3;
   animation: rise 0.25s ease both;
 }
 .cal-menu a {
@@ -509,7 +510,10 @@ input[type='radio'] {
 /* Countdown sitting in the hero, over the photos */
 .hero-countdown {
   gap: clamp(1.2rem, 5vw, 3.5rem);
-  margin-bottom: clamp(2.5rem, 6vh, 4rem);
+  margin-top: clamp(2rem, 5vh, 3rem);
+}
+.hero-done {
+  margin: clamp(2rem, 5vh, 3rem) 0 0;
 }
 .hero-countdown span {
   font-size: clamp(2.6rem, 8vw, 4.5rem);

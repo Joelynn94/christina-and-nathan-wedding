@@ -25,14 +25,14 @@ export default function Countdown() {
 
   if (done) {
     return (
-      <p className="eyebrow light fade-in" style={{ '--d': '0.1s' }}>
+      <p className="eyebrow light fade-in hero-done" style={{ '--d': '1.7s' }}>
         We said I do!
       </p>
     )
   }
 
   return (
-    <div id="countdown" className="countdown hero-countdown fade-in" style={{ '--d': '0.1s' }}>
+    <div id="countdown" className="countdown hero-countdown fade-in" style={{ '--d': '1.7s' }}>
       {Object.entries(time).map(([label, value]) => (
         <div key={label}>
           <span>{String(value).padStart(2, '0')}</span>

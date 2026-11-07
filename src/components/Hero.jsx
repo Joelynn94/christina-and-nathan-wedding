@@ -14,6 +14,7 @@ const fallbacks = [
 ]
 
 const weddingDate = new Date(site.ceremony.start).toLocaleDateString('en-US', {
+  weekday: 'long',
   month: 'long',
   day: 'numeric',
   year: 'numeric',
@@ -53,7 +54,6 @@ export default function Hero() {
       <div className="hero-overlay" />
 
       <div className="hero-content">
-        <Countdown />
         <p className="eyebrow light fade-in" style={{ '--d': '0.2s' }}>
           Save the Date
         </p>
@@ -82,6 +82,8 @@ export default function Hero() {
             </div>
           )}
         </div>
+
+        <Countdown />
       </div>
 
       <div className="slide-dots">
