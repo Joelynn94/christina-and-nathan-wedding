@@ -23,8 +23,8 @@ export const site = {
 // The password is stored as a SHA-256 hash, not as plain text.
 // Guests' input is lowercased before checking, so pick a lowercase password. To change it, run:
 //   node -e "console.log(require('crypto').createHash('sha256').update('NEWPASSWORD').digest('hex'))"
-// Current placeholder password: hiltonhead2027
-export const passwordHash = '14385f7e900d3bcf055b9fc68cea6328d76e119638039f27ea33a66a41f9bf8b'
+// Current placeholder password: christina+nathan+2027
+export const passwordHash = 'a05f4f80958e92aa07332d17e1f81b85d7b2341e99291c90b8f37309b03b4bdf'
 
 // The QR code links to  <domain>/?key=<qrKey>, which unlocks the site with no typing.
 // Change this to any random string if you ever need to revoke old QR codes.

@@ -4,7 +4,7 @@ Wedding website: Hilton Head Island, March 11–14, 2027.
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173  (password: hiltonhead2027)
+npm run dev      # http://localhost:5173  (password: christina+nathan+2027)
 npm run build    # outputs to dist/
 ```
 

@@ -6,6 +6,7 @@ export default function PasswordGate({ onUnlock }) {
   const [value, setValue] = useState('')
   const [error, setError] = useState('')
   const [checking, setChecking] = useState(false)
+  const [showPassword, setShowPassword] = useState(false)
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -28,18 +29,29 @@ export default function PasswordGate({ onUnlock }) {
         </p>
         <p className="eyebrow">Enter the password from your invitation</p>
         <form onSubmit={handleSubmit}>
-          <input
-            type="password"
-            placeholder="Password"
-            autoComplete="current-password"
-            autoFocus
-            value={value}
-            onChange={(e) => {
-              setValue(e.target.value)
-              setError('')
-            }}
-            required
-          />
+          <div className="gate-field">
+            <input
+              type={showPassword ? 'text' : 'password'}
+              placeholder="Password"
+              autoComplete="current-password"
+              autoFocus
+              value={value}
+              onChange={(e) => {
+                setValue(e.target.value)
+                setError('')
+              }}
+              required
+            />
+            <button
+              type="button"
+              className="gate-toggle"
+              onClick={() => setShowPassword((s) => !s)}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              aria-pressed={showPassword}
+            >
+              {showPassword ? 'Hide' : 'Show'}
+            </button>
+          </div>
           <button type="submit" className="btn" disabled={checking}>
             Enter
           </button>

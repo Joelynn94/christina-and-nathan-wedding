@@ -183,7 +183,7 @@ h3 {
 }
 .gate-card {
   width: 100%;
-  max-width: 420px;
+  max-width: 580px;
   text-align: center;
   padding: 3rem 2rem;
   background: var(--white);
@@ -200,6 +200,36 @@ h3 {
   flex-direction: column;
   gap: 0.8rem;
   margin-top: 1.5rem;
+}
+.gate-field {
+  position: relative;
+}
+.gate-field input {
+  padding-right: 4.5rem;
+}
+.gate-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0.4rem;
+  transform: translateY(-50%);
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--navy-soft);
+  background: none;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 0.6rem;
+  cursor: pointer;
+}
+.gate-toggle:hover {
+  color: var(--navy);
+}
+.gate-toggle:focus-visible {
+  outline: 2px solid var(--navy-soft);
+  outline-offset: 1px;
 }
 .gate-error,
 .form-error {
