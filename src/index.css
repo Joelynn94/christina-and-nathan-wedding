@@ -330,7 +330,15 @@ input[type='radio'] {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 1.5rem;
+  /* Dark see-through panel so the white text stays readable over bright photos */
+  margin: 0 1rem;
+  padding: clamp(1.8rem, 5vw, 3rem) clamp(1.2rem, 5vw, 3.5rem);
+  max-width: 1200px;
+  background: rgba(20, 28, 46, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .names {
   font-family: var(--script);
@@ -338,6 +346,13 @@ input[type='radio'] {
   line-height: 1.05;
   color: var(--white);
   text-shadow: 0 2px 30px rgba(31, 42, 68, 0.35);
+}
+/* Keep the names on one line on large screens; smaller screens can still wrap */
+@media (min-width: 1024px) {
+  .names {
+    white-space: nowrap;
+    font-size: min(8.5rem, 7.5vw); /* scales with the window so it never overflows the panel */
+  }
 }
 .names .amp {
   display: inline-block;
@@ -459,6 +474,20 @@ input[type='radio'] {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+/* Countdown sitting in the hero, over the photos */
+.hero-countdown {
+  gap: clamp(1.2rem, 5vw, 3.5rem);
+  margin-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+.hero-countdown span {
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  color: var(--white);
+  text-shadow: 0 2px 20px rgba(31, 42, 68, 0.35);
+}
+.hero-countdown small {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* ---------- Our story ---------- */

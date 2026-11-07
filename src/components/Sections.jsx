@@ -30,7 +30,7 @@ export function OurStory() {
             Tell guests how you met, your first date, and the proposal. Two or three short paragraphs is plenty: a few
             fun details, maybe an inside joke or two.
           </p>
-          <p>We can't wait to celebrate with you on Hilton Head Island.</p>
+          <p>We can't wait to celebrate with you in {site.city}.</p>
           <ul className="timeline">
             <li><strong>20XX</strong> We met</li>
             <li><strong>20XX</strong> First date</li>
@@ -45,7 +45,7 @@ export function OurStory() {
 export function Weekend() {
   return (
     <section id="weekend" className="section tinted">
-      <SectionTitle lead={`${site.weekendDates} · Hilton Head Island`}>The Weekend</SectionTitle>
+      <SectionTitle lead={`${site.weekendDates} · ${site.city}`}>The Weekend</SectionTitle>
       <div className="cards">
         {schedule.map((item) => (
           <article key={item.title} className={`card reveal ${item.featured ? 'featured' : ''}`}>
@@ -62,7 +62,7 @@ export function Weekend() {
 export function Explore() {
   return (
     <section id="explore" className="section">
-      <SectionTitle lead="Staying a few extra days? Here are a few of our favorites.">Explore Hilton Head</SectionTitle>
+      <SectionTitle lead="Staying a few extra days? Here are a few of our favorites.">Explore Northeast Ohio</SectionTitle>
       <div className="cards three">
         {attractions.map((item) => (
           <article key={item.title} className="card reveal">
@@ -89,8 +89,8 @@ export function Attire() {
         <p className="lead">Formal Coastal · Cocktail Attire</p>
         <p>
           Think elegant and breezy. Suits, or a jacket and tie, for gentlemen; cocktail dresses or dressy jumpsuits for
-          ladies. The ceremony is outdoors, so consider block heels or wedges, and bring a light layer for the March
-          evening breeze.
+          ladies. The ceremony is outdoors, so consider block heels or wedges, and bring a warm layer for the April
+          evening chill.
         </p>
         <p className="palette-label">Our colors</p>
         <div className="palette">
@@ -131,7 +131,7 @@ export function Footer() {
         {site.partner1} &amp; {site.partner2}
       </p>
       <p>
-        {stamp} · Hilton Head Island
+        {stamp} · {site.city}
       </p>
     </footer>
   )

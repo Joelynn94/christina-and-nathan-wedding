@@ -3,7 +3,6 @@ import { checkExistingAccess } from './lib/auth'
 import PasswordGate from './components/PasswordGate'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
-import Countdown from './components/Countdown'
 import Rsvp from './components/Rsvp'
 import PhotoBooth from './components/PhotoBooth'
 import QrPage from './components/QrPage'
@@ -43,7 +42,6 @@ export default function App() {
       <Nav />
       <Hero />
       <main>
-        <Countdown />
         <OurStory />
         <Weekend />
         <Explore />

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { site, slides } from '../config'
+import Countdown from './Countdown'
 import { googleCalendarUrl, icsDataUrl } from '../lib/calendar'
 
 const SLIDE_MS = 6000
@@ -52,6 +53,7 @@ export default function Hero() {
       <div className="hero-overlay" />
 
       <div className="hero-content">
+        <Countdown />
         <p className="eyebrow light fade-in" style={{ '--d': '0.2s' }}>
           Save the Date
         </p>
@@ -92,7 +94,7 @@ export default function Hero() {
           />
         ))}
       </div>
-      <a href="#countdown" className="scroll-cue" aria-label="Scroll down">
+      <a href="#story" className="scroll-cue" aria-label="Scroll down">
         ⌄
       </a>
     </header>
